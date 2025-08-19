@@ -3,14 +3,14 @@
 	<!-- _________________________ Application Settings _________________________ -->
 	<app
 		title="Pibby Codename Engine" main="funkin.backend.system.Main"
-		file="CodenameEngine" packageName="com.pibbycodename.pibby"
+		file="PibbyEngine" packageName="com.pibbycodename.pibbyengine"
 		package="com.pibbycodename.pibbyengine"
-		version="HOTFIX 0.71" company="Yoshman29" />
+		version="HOTFIX 0.71" company="PibbyEngine" />
 
 	<!--
 		CHANGE THE SAVE PATH & NAME FOR YOUR MOD HERE!
 	-->
-	<haxedef name="SAVE_PATH" value="CodenameEngine"/>
+	<haxedef name="SAVE_PATH" value="PibbyEngine"/>
 	<haxedef name="SAVE_NAME" value="save-default"/>
 
 	<haxedef name="SAVE_OPTIONS_PATH" value="CodenameEngine"/>
@@ -239,7 +239,7 @@
 	<!-- Do whatever you want I'm tired uninstall and install everytime -->
 	<certificate path="key.keystore" password="codenameengine" alias="cneport" alias-password="codenameengine" if="android" unless="debug" />
 
-	<haxedef name="SHARE_MOBILE_FILES" if="ios" />
+	<haxedef name="SHARE_MOBILE_FILES" if="mobile" />
 
 	<!-- Category Type for Apple Systems -->
 	<config:ios category_type="public.app-category.music-games" />
