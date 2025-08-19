@@ -20,7 +20,7 @@ jobs:
           path: ${{ github.workspace }}
 
       - name: Move Android File
-        run: mv "${{ github.workspace }}/CodenameEngine-release.apk" "${{ github.workspace }}/Codename Engine-Android.apk"
+        run: mv "${{ github.workspace }}/PibbyEngine-release.apk" "${{ github.workspace }}/PibbyEngine-Android.apk"
 
       - name: Download iOS Build
         uses: actions/download-artifact@main
@@ -29,13 +29,13 @@ jobs:
           path: ${{ github.workspace }}
 
       - name: Move iOS File
-        run: mv "${{ github.workspace }}/CodenameEngine.ipa" "${{ github.workspace }}/Codename Engine-iOS.ipa"
+        run: mv "${{ github.workspace }}/PibbyEngine.ipa" "${{ github.workspace }}/PibbyEngine-iOS.ipa"
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "v1.0.1"
-          tag_name: "v1.0.1"
+          name: "HOTFIX 0.71"
+          tag_name: "HOTFIX 0.71"
           prerelease: false
           files: |
             ${{ github.workspace }}/*.apk
