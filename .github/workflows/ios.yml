@@ -23,7 +23,7 @@ jobs:
           key: cache-build-ios
           path: |
             .haxelib/
-            export/release/ios/CodenameEngine/haxe/
+            export/release/ios/PibbyEngine/haxe/
           restore-keys: |
             cache-build-ios
       - name: Installing/Updating libraries
@@ -54,11 +54,11 @@ jobs:
         run: |
           brew install ldid
           cd export/release/ios/build/Release-iphoneos/CodenameEngine.app
-          ldid -S../../../CodenameEngine/CodenameEngine.entitlements CodenameEngine
+          ldid -S../../../PibbyEngine/PibbyEngine.entitlements PibbyEngine
           cd ..
           mkdir Payload
-          mv CodenameEngine.app Payload
-          zip -r CodenameEngine.ipa Payload
+          mv PibbyEngine.app Payload
+          zip -r PibbyEngine.ipa Payload
       - name: Uploading artifact (entire build)
         uses: actions/upload-artifact@v4
         with:
@@ -71,6 +71,6 @@ jobs:
           key: cache-build-ios
           path: |
             .haxelib/
-            export/release/ios/CodenameEngine/haxe/
+            export/release/ios/PibbyEngine/haxe/
           restore-keys: |
             cache-build-ios
