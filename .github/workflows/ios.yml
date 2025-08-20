@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Codename Engine iOS
-          path: export/release/ios/build/Release-iphoneos/*.ipa
+          path: export/release/ios/build/Release-iphoneos/PibbyEngine.ipa
       - name: Uploading new cache
         uses: actions/cache@v4
         with:
